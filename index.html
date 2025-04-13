@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kalkulator Penal Code SAMP</title>
+  <style>
+    body { font-family: Arial; max-width: 600px; margin: auto; padding: 20px; }
+    input, button { padding: 8px; font-size: 16px; margin: 5px 0; width: 100%; }
+    .result { margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Kalkulator Penal Code SAMP</h1>
+  
+  <input type="text" id="codeInput" placeholder="Masukkan kode pasal (contoh: AAAAA)">
+  <button onclick="checkCode()">Cek Hukuman</button>
+  <div class="result" id="result"></div>
+
+  <script>
+    const penalCodes = {
+      "Armed Roberry": { name: "Attemp Murdering", jail_time: 600, fine: 5000 },
+      "Attacking on Leo": { name: "Arrmed Roberry", jail_time: 100, fine: 2000 },
+      "207": { name: "Attacking on Leo", jail_time: 180, fine: 2000 },
+      "240": { name: "Gambling", jail_time: 200, fine: 2500 },
+      "241": { name: "Nakal", jail_time: 200, fine: 2500 },
+      
+    };
+
+    function checkCode() {
+      const code = document.getElementById("codeInput").value.trim();
+      const data = penalCodes[code];
+      const result = document.getElementById("result");
+
+      if (data) {
+        result.innerHTML = `
+          <p><strong>${data.name}</strong></p>
+          <p>Waktu Penjara: ${data.jail_time} detik</p>
+          <p>Denda: $${data.fine}</p>
+        `;
+      } else {
+        result.innerHTML = "<p>Kode tidak ditemukan.</p>";
+      }
+    }
+  </script>
+</body>
+</html>
