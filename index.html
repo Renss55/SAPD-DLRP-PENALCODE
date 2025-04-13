@@ -2,7 +2,54 @@
 <html>
 <head>
   <title>Kalkulator Penal Code SAMP</title>
-  <style>
+  <style>body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+button {
+  padding: 12px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #1e40af;
+}
+.card {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e0f2fe;
+  border-left: 6px solid #0284c7;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.card.error {
+  background-color: #fee2e2;
+  border-left-color: #dc2626;
+}
     body { font-family: Arial; max-width: 600px; margin: auto; padding: 20px; }
     input, button { padding: 8px; font-size: 16px; margin: 5px 0; width: 100%; }
     .result { margin-top: 20px; }
